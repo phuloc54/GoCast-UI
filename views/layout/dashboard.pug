@@ -1,0 +1,22 @@
+include ../mixins/mixins.pug 
+
+//- Variable Title
+block vars 
+  - var title = "Title"
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+
+    //- CSS Style Sheet
+    block stylesheet 
+      link(rel="stylesheet", href="./styles/common.css")
+  body 
+    .wrapper
+      include ./sidebar.pug 
+      main 
+        include ./header.pug 
+        block main-content 
