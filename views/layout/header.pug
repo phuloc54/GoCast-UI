@@ -1,2 +1,15 @@
-header.header 
-  p this is header
+header.header
+  .header-inner
+    from.header-form 
+      img.header-form__icon(src="./icons/home/search-icon.svg", alt="")
+      input.header-search(type="text" placeholder= "Search 2+ million podcasts and listeners")
+    .header-cta 
+      a.header-upload.primary-button(href="#!")
+        img.header-upload__icon(src="./icons/home/upload-icon.svg", alt="")
+        span.header-upload-text Upload
+      a.header-message(href="#!")
+        img.header-message__icon(src="./icons/home/message-icon.svg", alt="") 
+      a.header-bell(href="#!")
+        img.header-bell__icon(src="./icons/home/bell.svg", alt="") 
+    .header-user    
+      img.header-user__avatar(src="./images/home/header-use-avt.png", alt="")

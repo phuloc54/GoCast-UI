@@ -4,15 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/home.css">
   </head>
-  <body style="height: 10000px;"> 
+  <body> 
     <div class="wrapper">
-      <aside class="sidebar"> </aside>
+      <aside class="sidebar"> 
+        <div class="sidebar-inner"> <img class="icon" src="./icons/home/GoCast_Logo.svg" alt="GoCast">
+          <div class="sidebar-wrapper"> 
+            <nav class="sidebar-navigation"> 
+              <ul class="sidebar-nav"> 
+                <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/nav_icon_1.svg" alt=""/><span class="sidebar-item__title">Home</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/nav_icon_2.svg" alt=""/><span class="sidebar-item__title">Trending</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/nav_icon_3.svg" alt=""/><span class="sidebar-item__title">Explore Topics</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/nav_icon_4.svg" alt=""/><span class="sidebar-item__title">Playlist</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/nav_icon_5.svg" alt=""/><span class="sidebar-item__title">Subscriptions</span></a></li>
+              </ul>
+            </nav>
+            <ul class="sidebar-list"> 
+              <h3 class="sidebar-list__title">Podcasters</h3>
+              <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/sidebar-icon-1.svg" alt=""/><span class="sidebar-item__title">Dashboard</span></a></li>
+              <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/sidebar-icon-2.svg" alt=""/><span class="sidebar-item__title">Episodes</span></a></li>
+              <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/sidebar-icon-3.svg" alt=""/><span class="sidebar-item__title">Team</span></a></li>
+              <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/sidebar-icon-4.svg" alt=""/><span class="sidebar-item__title">Subscribers</span></a></li>
+            </ul>
+            <ul class="sidebar-community">
+              <h3 class="sidebar-list__title">Community</h3>
+              <li class="sidebar-item"> <a class="sidebar-item__link" href="#!"><img class="sidebar-item__icon" src="./icons/home/sidebar-icon-6.svg" alt=""/><span class="sidebar-item__title">Leaderboard</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
       <main> 
-        <header class="header"> 
-          <p>this is header</p>
+        <header class="header">
+          <div class="header-inner">
+            <from class="header-form"> <img class="header-form__icon" src="./icons/home/search-icon.svg" alt="">
+              <input class="header-search" type="text" placeholder="Search 2+ million podcasts and listeners">
+            </from>
+            <div class="header-cta"> <a class="header-upload primary-button" href="#!"><img class="header-upload__icon" src="./icons/home/upload-icon.svg" alt=""><span class="header-upload-text">Upload</span></a><a class="header-message" href="#!"><img class="header-message__icon" src="./icons/home/message-icon.svg" alt=""></a><a class="header-bell" href="#!"><img class="header-bell__icon" src="./icons/home/bell.svg" alt=""></a></div>
+            <div class="header-user">   <img class="header-user__avatar" src="./images/home/header-use-avt.png" alt=""></div>
+          </div>
         </header>
         <section class="hero"> 
           <p>This is hero component</p>

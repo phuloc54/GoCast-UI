@@ -1,0 +1,8 @@
+//- Mixins Page Home
+
+//- Navigation item
+mixin sidebarItem (src_icon, title, href= "#!")
+  li.sidebar-item 
+    a.sidebar-item__link(href= href)
+      img.sidebar-item__icon(src= src_icon, alt="")
+      span.sidebar-item__title= title

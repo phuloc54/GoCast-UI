@@ -1,0 +1,58 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/variables" as var;
+
+.sidebar {
+  &-inner {
+    padding: 48px 30px;
+    border-right: 1px solid var.$border-color;
+  }
+
+  &-wrapper {
+    margin-top: 44px;
+  }
+
+  &-nav,
+  &-list {
+    padding-bottom: 25px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid;
+    color: #e9eef4;
+  }
+
+  &-item:not(:last-child) {
+    margin-bottom: 6px;
+  }
+
+  &-item__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 20px;
+    min-width: 196px;
+    height: 40px;
+
+    color: #8494ab;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.42em;
+
+    background: white;
+    border-radius: 12px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: white;
+      background: var(--gradient, linear-gradient(142deg, #415ef4 0%, #7141ef 100%));
+    }
+  }
+
+  &-list__title {
+    padding-left: 20px;
+    color: #8494ab;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.46em;
+    margin-bottom: 10px;
+  }
+}
