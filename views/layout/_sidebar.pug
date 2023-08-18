@@ -1,0 +1,12 @@
+aside.sidebar   
+	img.logo(srcset="./icons/logo.svg", alt="GoCastUI")
+	ul.menu 
+		each item in [{text: "Home", icon: "icon-home", href: "/"}, {text: "Trending", icon: "icon-trending", href: "./trending.html"}, {text: "Explore Topics", icon: "icon-cube", href: "#!"}, {text: "Playlist", icon: "icon-play", href: "#!"}, {text: "Subscriptions", icon: "icon-subscription", href: "#!"}]
+			+menuItem(item)
+	ul.menu 
+		each item in [{text: "Dashboard", icon: "dashboard-icon", href: "#!"}, {text: "Episodes", icon: "episodes", href: "#!"}, {text: "Team", icon: "team", href: "#!"}, {text: "Subscribers", icon: "subscriber", href: "#!"}]
+			+menuItem(item)
+	ul.menu 
+		h3.menu__title Community
+		each item in [{text: "Leaderboard", icon: "medal", href: "#!"}]
+			+menuItem(item)

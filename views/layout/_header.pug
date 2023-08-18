@@ -1,0 +1,16 @@
+header.header 
+  .header-inner
+    from.header-form 
+      input.header-search(type="text" placeholder="Search 2+ million podcasts and listeners")
+      span.header-form__icon 
+        include ../icons/_search-icon.pug
+    .header-cta  
+      a.primary-button.header-cta__btn(href="#!") 
+        img(src="./icons/home/upload-icon.svg", alt="")
+        span Upload
+      a.header-cta__message(href="#!") 
+        img(src="./icons/home/message-icon.svg", alt="")
+      a.header-cta__notify(href="#!")   
+        img(src="./icons/home/bell.svg", alt="")
+    .header-user 
+      img.header-user__avatar(srcset="./images/home/user-avt.png 2x", alt="")

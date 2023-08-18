@@ -1,0 +1,32 @@
+mixin menuItem(data)
+  .menu-item 
+    a.menu__link(href= data.href)
+      span.menu__icon 
+        if data.icon  
+          case data.icon  
+            when "icon-home"
+              include ../icons/_home-icon
+            when "icon-trending"
+              include ../icons/_trending-icon
+            when "icon-cube"
+              include ../icons/_cube-icon
+            when "icon-play"
+              include ../icons/_play-icon
+            when "icon-subscription"
+              include ../icons/_subscription-icon
+            when "episodes"
+              include ../icons/_episodes
+            when "dashboard-icon"
+              include ../icons/_dashboard-icon
+            when "team"
+              include ../icons/_team
+            when "subscriber"
+              include ../icons/_subscriber
+            when "medal"
+              include ../icons/_medal
+      span.menu__text= data.text
+
+mixin hostUser(user)
+  li.host-user
+    img.host-user__avt(src= user.src_avt, alt="" style= `--color: ${user.color}`)
+    h3.host-user__name= user.name

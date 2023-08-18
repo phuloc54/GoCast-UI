@@ -1,3 +1,123 @@
+.host__heading {
+  color: #1B1D21;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.host-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 70px;
+  column-gap: 30px;
+  padding: 2px 0;
+  padding-left: 1px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+}
+.host-list::-webkit-scrollbar {
+  display: none;
+}
+.host-user {
+  text-align: center;
+  scroll-snap-align: start;
+}
+.host-user__avt {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid white;
+  outline: 1.5px solid #FFABC6;
+  background: var(--color);
+}
+.host-user__name {
+  color: #5F6164;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.42em; /* 142.857% */
+}
 
+.trending {
+  margin-top: 28px;
+}
+.trending__title {
+  color: #1B1D21;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5em; /* 150% */
+  margin-bottom: 10px;
+}
+.trending-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 676px;
+  height: 220px;
+  padding: 20px;
+  background: #F8F8F8;
+  border-radius: 10px;
+}
+.trending-content {
+  max-width: 310px;
+}
+.trending__heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.45em;
+  margin-bottom: 11px;
+}
+.trending__heading span {
+  background: var(--gradient, linear-gradient(142deg, #415ef4 0%, #7141ef 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.trending__desc, .trending__author {
+  color: #676a6f;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.43em; /* 142.857% */
+  margin-bottom: 4px;
+}
+.trending__author {
+  margin-bottom: 20px;
+}
+.trending__author span {
+  color: #232333;
+}
+.trending__button {
+  min-width: 126px;
+  height: 40px;
+  gap: 6px;
+}
+.trending-media {
+  width: 332px;
+  height: 274px;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+}
+.trending-media::after {
+  content: url(../../../icons/home/chevron-icon.svg);
+  position: absolute;
+  top: 91px;
+  right: 61px;
+}
+.trending__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  column-gap: 60px;
+}
 
 /*# sourceMappingURL=home.css.map */

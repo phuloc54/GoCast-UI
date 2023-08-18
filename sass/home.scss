@@ -1,1 +1,6 @@
-@use "./pages/home/hero";
+@use "./pages/home";
+.home-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  column-gap: 60px;
+}

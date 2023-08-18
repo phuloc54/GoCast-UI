@@ -183,10 +183,13 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: "IBM Plex Sans";
   font-weight: 400;
   color: #1B1D21;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -204,9 +207,109 @@ a {
   font-weight: 600;
   line-height: 1.46em; /* 146.667% */
 }
+.primary-button:hover {
+  opacity: 0.9;
+}
+
+.header {
+  padding: 20px 56px;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+.header-form {
+  position: relative;
+  flex: 0 1 361px;
+}
+.header-form::after {
+  content: "";
+  position: absolute;
+  left: 54px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 20px;
+  background: #6c5dd3;
+  display: block;
+}
+.header-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.header-search {
+  padding: 12px 20px 12px 60px;
+  width: 100%;
+  height: 48px;
+  color: #6c5dd3;
+  font-weight: 500;
+  background: #F0F3F6;
+  border-radius: 12px;
+  border: 2px solid transparent;
+}
+.header-search::placeholder {
+  color: #A6A7B2;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46em; /* 146.667% */
+}
+.header-search:focus {
+  border-color: #6c5dd3;
+}
+.header-cta {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 24px;
+}
+.header-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 112px;
+  height: 48px;
+  border-radius: 8px;
+}
+.header-cta__message {
+  margin-left: 36px;
+  margin-right: 48px;
+}
+.header-cta__message, .header-cta__notify {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.header-cta__message::before, .header-cta__notify::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  outline: 2px solid white;
+  border-radius: 50%;
+  background: #FF754C;
+}
+.header-user {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffa2c0;
+}
+.header-user__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
 
 .sidebar {
   padding: 48px 30px;
+  border-right: 1px solid #E9EEF4;
 }
 
 .logo {
@@ -267,6 +370,10 @@ a {
   display: grid;
   grid-template-columns: 256px minmax(0, 1fr);
   min-height: 100vh;
+}
+
+.main-container {
+  padding: 37px 56px;
 }
 
 /*# sourceMappingURL=common.css.map */
