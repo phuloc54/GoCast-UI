@@ -1,23 +1,13 @@
-aside.sidebar 
-  .sidebar-inner 
-    img.icon(src="./icons/home/GoCast_Logo.svg", alt="GoCast")
-    .sidebar-wrapper 
-      nav.sidebar-navigation 
-        ul.sidebar-nav 
-          +sidebarItem("./icons/home/nav_icon_1.svg", "Home")
-          +sidebarItem("./icons/home/nav_icon_2.svg", "Trending")
-          +sidebarItem("./icons/home/nav_icon_3.svg", "Explore Topics")
-          +sidebarItem("./icons/home/nav_icon_4.svg", "Playlist")
-          +sidebarItem("./icons/home/nav_icon_5.svg", "Subscriptions")
-      ul.sidebar-list 
-        h3.sidebar-list__title Podcasters
-        +sidebarItem("./icons/home/sidebar-icon-1.svg", "Dashboard")
-        +sidebarItem("./icons/home/sidebar-icon-2.svg", "Episodes")
-        +sidebarItem("./icons/home/sidebar-icon-3.svg", "Team")
-        +sidebarItem("./icons/home/sidebar-icon-4.svg", "Subscribers")
-      ul.sidebar-community
-        h3.sidebar-list__title Community
-        +sidebarItem("./icons/home/sidebar-icon-6.svg", "Leaderboard")
+aside.sidebar   
+  img.logo(src="./icons/logo.svg", alt="GoCastUI")
+  ul.menu 
+    each item in [{text: "Home", icon: "icon-home", href: "#!"}, {text: "Trending", icon: "icon-trending", href: "#!"}, {text: "Explore Topics", icon: "icon-cube", href: "#!"}, {text: "Playlist", icon: "icon-play", href: "#!"}, {text: "Subscriptions", icon: "icon-subscription", href: "#!"}]
+      +menuItem(item)
+  ul.menu 
+    each item in [{text: "Dashboard", icon: "dashboard", href: "#!"}, {text: "Episodes", icon: "episodes", href: "#!"}, {text: "Team", icon: "team", href: "#!"}, {text: "Subscribers", icon: "subscriber", href: "#!"}]
+      +menuItem(item)
 
-
-  
+  //- ul.menu 
+  //-   h3.menu__title Community
+  //-   each item in [{icon: "./icons/home/medal.svg", text: "Leaderboard"}]
+  //-     +menuItem(item)
