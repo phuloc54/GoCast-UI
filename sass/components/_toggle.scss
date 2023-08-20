@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as var;
+.toggle {
+  position: relative;
+  width: 30px;
+  height: 17px;
+  border-radius: 30px;
+  background: var.$gray-2-color;
+
+  &::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+input.toggle:checked + .toggle {
+  background: var(--gradient, linear-gradient(142deg, #415ef4 0%, #7141ef 100%));
+}
+
+input.toggle:checked + .toggle::after {
+  left: inherit;
+  right: 2px;  
+}

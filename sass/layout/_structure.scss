@@ -2,8 +2,25 @@
   display: grid;
   grid-template-columns: 256px minmax(0, 1fr);
   min-height: 100vh;
+
+  @media screen and (max-width: 1440px) {
+    display: block;
+  }
 }
 
 .main-container {
   padding: 37px 56px;
 }
+
+@media screen and (max-width: 1440px) {
+  .main-container {
+    padding-inline: 24px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .main-container {
+    padding: 10px 24px;
+  }
+}
+

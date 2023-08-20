@@ -1,0 +1,48 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mx;
+.follow {
+  margin-bottom: 40px;
+  &-item {
+    display: flex;
+    align-items: flex-end;
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+  &__avt {
+    width: 46px;
+    height: 46px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 13px;
+    box-shadow: 0 0 0 3px white, 0 0 0 4px pink;
+  }
+
+  &-item-info {
+    .name {
+      font-size: 1.5rem;
+      line-height: 1.46;
+      margin-bottom: 4px;
+    }
+    .desc {
+      color: var.$gray-2-color;
+      font-size: 1.3rem;
+      line-height: 1.46; /* 146.154% */
+    }
+  }
+  &-item__button {
+    margin-left: auto;
+    min-width: 82px;
+    height: 34px;
+    padding: 0 8px;
+
+    span {
+      pointer-events: none;
+    }
+  }
+
+  @media screen and (max-width: 575.98px) {
+    
+  }
+}

@@ -1,0 +1,22 @@
+section.feed 
+  .feed-top 
+    .feed-tab-list
+      each title in [{title: "My Feed", link: "#!"}, {title: "Poplar Feed", link: "#!"}, {title: "Recent", link: "#!"}]
+        +feedTabItem(title)
+    .feed-toggle 
+      +toggle()
+      p.feed-toggle-desc New Releases&nbsp;&amp;&nbsp;Guests Only
+  .feed-list  
+    article.feed-item  
+      +feedItemHeader({link_info: "#!", avt: "./images/home/host-avt-1.png", name: "James Killened", desc: "relesed a new episode", stars: 10, date: "1 Jan 2023", mail: "@thomas231", view_more: "#!"})
+      +feedItemBody({link_share:"#!" , src_image: "images/home/feed-item-img.png", name_chapter: "Perspective Podcast (Ep. 1)", title: "Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik " , date: "11 dayes ago", duration: "45mins 10 Sec", desc: "Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for..."})
+      +feedItemFoot({link_1: "#!", link_2: "#!", link_3: "#!", link_button: "#!"})
+    article.feed-item  
+      +feedItemHeader({link_info: "#!", avt: "./images/home/host-avt-1.png", name: "James Killened", desc: "relesed a new episode", stars: 10, date: "1 Jan 2023", mail: "@thomas231", view_more: "#!"})
+      +feedItemBody({link_share:"#!" , src_image: "images/home/feed-item-img.png", name_chapter: "Perspective Podcast (Ep. 1)", title: "Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik " , date: "11 dayes ago", duration: "45mins 10 Sec", desc: "Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for..."})
+      +feedItemFoot({link_1: "#!", link_2: "#!", link_3: "#!", link_button: "#!"})
+    article.feed-item  
+      +feedItemHeader({link_info: "#!", avt: "./images/home/host-avt-1.png", name: "James Killened", desc: "relesed a new episode", stars: 10, date: "1 Jan 2023", mail: "@thomas231", view_more: "#!"})
+      +feedItemBody({link_share:"#!" , src_image: "images/home/feed-item-img.png", name_chapter: "Perspective Podcast (Ep. 1)", title: "Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik " , date: "11 dayes ago", duration: "45mins 10 Sec", desc: "Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for..."})
+      +feedItemFoot({link_1: "#!", link_2: "#!", link_3: "#!", link_button: "#!"})
+    

@@ -10,21 +10,18 @@
   }
 
   &-list {
+    max-width: 900px;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 70px;
     column-gap: 30px;
     padding: 2px 0;
     padding-left: 1px;
-    overflow-x: auto;
-    @include mx.hiddenScroll;
-    scroll-snap-type: x mandatory;
-    scroll-snap-stop: always;
+    overflow-x: hidden;
   }
 
   &-user {
     text-align: center;
-    scroll-snap-align: start;
   }
 
   &-user__avt {
@@ -43,5 +40,77 @@
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.42em; /* 142.857% */
+  }
+  @include mx.maxWidth(1125px) {
+    &-list {
+      column-gap: 30px;
+      grid-auto-columns: 65px;
+    }
+
+    &-user__avt {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @include mx.maxWidth(1100px) {
+    &-list {
+      column-gap: 20px;
+      grid-auto-columns: 55px;
+    }
+
+    &-user__avt {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  @include mx.maxWidth(991.98px) {
+    &-list {
+      column-gap: 30px;
+      grid-auto-columns: 70px;
+    }
+
+    &-user__avt {
+      width: 65px;
+      height: 65px;
+    }
+  }
+  
+  @include mx.maxWidth(767.78px) {
+    &__heading {
+      margin-bottom: 12px;
+    }
+
+    &-list {
+      column-gap: 20px;
+      grid-auto-columns: 55px;
+      overflow-x: auto;
+      @include mx.hiddenScroll;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+    }
+
+    &-user {
+      scroll-snap-align: start;
+    }
+
+    &-user__avt {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  @include mx.maxWidth(575.98px) {
+    &-list {
+      column-gap: 14px;
+      grid-auto-columns: 45px;
+    }
+
+    &-user__avt {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 6px;
+    }
   }
 }

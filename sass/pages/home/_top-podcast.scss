@@ -1,0 +1,27 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mx;
+.podcast {
+  margin-bottom: 40px;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @include mx.maxWidth(575.98px) {
+    margin-top: 20px;
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+    }
+  }
+}

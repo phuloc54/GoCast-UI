@@ -30,3 +30,132 @@ mixin hostUser(user)
   li.host-user
     img.host-user__avt(src= user.src_avt, alt="" style= `--color: ${user.color}`)
     h3.host-user__name= user.name
+
+mixin trendingItem(data)
+  .trending-item 
+    .trending-content
+      h1.trending__heading 
+        span= data.text_gradient
+        |&nbsp;Process:&nbsp;#{data.heading}
+      p.trending__desc= data.desc
+      p.trending__author 
+        span= data.author_name
+        |&nbsp;(&nbsp;#{data.author_position}&nbsp;)
+      button.primary-button.trending__button
+        img(src="./icons/home/play-icon-trending.svg", alt="play-icon")
+        span Play Now
+    .trending-media
+      img.trending__image(srcset= data.src_image, alt="")
+
+mixin dots(quantity= 5, idxActive= quantity)
+  -var n = quantity
+  .dots
+    while n >= 0
+      if n == idxActive 
+        .dot(class= "dot--active")
+        -n--
+      else 
+        .dot
+      - n--
+
+mixin feedTabItem(tab)
+  a.feed-tab__title(href= tab.link)
+    h3= tab.title
+
+mixin toggle()
+  label.toggle-label(for= "toggle")
+    input(type="checkbox", name="" id= "toggle" class="toggle" hidden)
+    .toggle
+
+mixin feedItemHeader(user)
+  .feed-item-header 
+    .feed-item-user
+      a.feed-use__wrapper-image(href=user.link_info)
+        img.feed-user__avt(src= user.avt, alt="")
+      .feed-user__info    
+        a(href= user.link_info).feed-user__desc 
+          span.name= user.name
+          span.ratting
+            .feed-ratting__text= user.desc
+            -var n = user.stars 
+            if (n >= 5)
+              - n = 5
+            while n > 0
+              img(src= "./icons/home/star.svg", alt="")
+              - n--
+        if user.mail
+          span.feed-user__email= user.mail + " "
+        span.feed-item__date= user.date
+    a.feed-item__more(href= user.view_more) 
+      img(src="./icons/home/three-dots.svg", alt="")
+
+mixin feedItemBody(data)
+  .feed-item-body 
+    a.feed-body-media(href= data.link_share)
+      img.feed-body__image(src=data.src_image, alt="")
+    .feed-body-info 
+      .feed-body-top 
+        p.feed-body__chapter= data.name_chapter
+        a.feed-body-share(href= data.link_share)
+          img(src="./icons/home/share-icon.svg", alt="share-icon")
+      a.feed-body__title(href= data.link_share)
+        h3= data.title 
+      .feed-body-time   
+        .feed-body-date 
+          img(src="icons/home/clock-icon.svg", alt="clock")
+          span= data.date
+        .feed-body-duration   
+          img(src="icons/home/clock-2-icon.svg", alt="clock")
+          span= data.duration
+      p.feed-body__desc= data.desc
+
+mixin feedItemFoot(data) 
+  .feed-item-foot
+    .feed-foot-links  
+      a(href= data.link_1)
+        img(src="./icons/home/heart-icon.svg", alt="heart") 
+      a(href= data.link_2)
+        img(src="./icons/home/feed-star-icon.svg", alt="")
+      a(href= data.link_3)
+        img(src="./icons/home/feed-playlist-icon.svg", alt="") 
+    a.primary-button.feed-foot__button(href= data.link_button)
+      img(src="./icons/home/feed-play-icon.svg", alt="")
+      span Play Episode
+
+mixin podcastItemImage(src)
+  a(href= src.href).podcast__wrapper-image
+    img(src= src.link, alt="").podcast__image
+
+mixin sectionTop(data)
+  .section-top  
+    h2.section__heading= data.title
+    a(href= data.link).section__view
+      if data.text_link
+        span= data.text_link
+        img(src="./icons/home/chevron-right-icon.svg", alt="chevron-right") 
+
+mixin followItem(data)
+  .follow-item 
+    img.follow__avt(srcset= data.scr_avt, alt="")
+    .follow-item-info 
+      h3.name= data.name
+      span.desc= data.desc
+    a.primary-button.follow-item__button(href="#!")
+      span Follow
+
+
+mixin historyItem(dt)
+  article.history-item
+    a(href= dt.href) 
+      img.history__image(src=dt.src_img, alt="")
+    section.history-info 
+      p.history__desc.home-right-text= dt.desc
+      a.history__title(href= dt.href)
+        h3= dt.title
+      .history__stats.home-right-text
+        .history__watchs 
+          img(src="./icons/home/history-icon-1.svg", alt="")
+          span= dt.watchs
+        .history__like 
+          img(src="./icons/home/history-icon-2.svg", alt="")
+          span= dt.likes

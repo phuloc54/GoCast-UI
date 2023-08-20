@@ -6,3 +6,31 @@
     display: none;
   }
 }
+
+//mixin textClamp
+@mixin textClamp($value) {
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+//mixin background Image
+@mixin bgImage($link) {
+  background: linear-gradient(to right, rgba(#000, 0.5), rgba(#000, 0.5)),
+    url($link) no-repeat center / cover;
+}
+
+@mixin minWidth($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}

@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as var;
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
+
+  margin-top: 16px;
+  
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: var.$gray-2-color;
+    border-radius: 50%;
+    box-sizing: content-box;
+
+    &--active {
+      background: white;
+      border: 2px solid var.$secondary-color;
+    }
+  }
+}

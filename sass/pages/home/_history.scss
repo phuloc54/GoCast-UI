@@ -1,0 +1,37 @@
+.history {
+  margin-bottom: 42px;
+  &-item {
+    display: flex;
+    align-items: center;
+
+    & + & {
+      margin-top: 18px;
+    }
+  }
+
+  &__image {
+    width: 109px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.46em;
+    margin-bottom: 3px;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__like, &__watchs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

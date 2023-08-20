@@ -1,6 +1,9 @@
 @use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mx;
 .trending {
-  margin-top: 28px;
+  container-type: inline-size;
+  container-name: trending;
+  margin-top: 55px;
   &__title {
     color: var.$title-color;
     font-size: 1.6rem;
@@ -11,19 +14,30 @@
 
   &-banner {
     position: relative;
-
     display: flex;
     align-items: center;
 
-    width: 676px;
     height: 220px;
-    padding: 20px;
-
     background: var.$natural-1-color;
     border-radius: 10px;
   }
 
-  &-content {
+  &-list {
+    display: flex;
+    width: 100%;
+    // overflow-x: auto;
+    // @include mx.hiddenScroll
+  }
+
+  &-item {
+    position: relative;
+    flex: 1 0 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  &-content  {
+    flex-shrink: 0;
     max-width: 310px;
   }
 
@@ -32,8 +46,8 @@
     font-weight: 600;
     line-height: 1.45em;
     margin-bottom: 11px;
-
     span {
+      color: transparent;
       background: var(--gradient, linear-gradient(142deg, #415ef4 0%, #7141ef 100%));
       background-clip: text;
       -webkit-background-clip: text;
@@ -47,6 +61,7 @@
     font-weight: 400;
     line-height: 1.43em; /* 142.857% */
     margin-bottom: 4px;
+    white-space: nowrap;
   }
 
   &__author {
@@ -82,4 +97,27 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @container trending (max-width: 650px) {
+    &-media {
+      display: none;
+    }
+
+    &-content {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    margin-top: 28px;
+
+    &__button {
+      min-width: 126px;
+      height: 40px;
+    }
+
+    .dots {
+      display: none;
+    }
+  }  
 }

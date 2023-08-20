@@ -1,0 +1,40 @@
+@use "../../abstracts/mixins" as mx;
+.topic {
+  margin-bottom: 30px;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+  }
+
+  &-item {
+    @include mx.bgImage("../images/home/topic-img-bg-1.png");
+    height: 86px;
+    width: calc(50% - 11px);
+    border-radius: 10px;
+    position: relative;
+  }
+
+  &-item:nth-child(2) {
+    @include mx.bgImage("../images/home/topic-img-bg-3.png");
+  }
+
+  &-item:nth-child(3) {
+    @include mx.bgImage("../images/home/topic-img-bg-3.png");
+  }
+
+  &-item:nth-child(4) {
+    @include mx.bgImage("../images/home/topic-img-bg-4.png");
+  }
+
+
+  &-item__title, &__quantity.home-right-text {
+    color: white;
+  }
+
+  &-item__content {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+}

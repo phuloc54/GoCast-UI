@@ -2,6 +2,10 @@
 .sidebar {
   padding: 48px 30px;
   border-right: 1px solid var.$border-color;
+
+  @media screen and (max-width: 1440px) {
+    display: none;
+  }
 }
 
 .logo {

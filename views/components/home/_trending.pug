@@ -1,12 +1,8 @@
 section.trending 
   h2.trending__title Trending
   section.trending-banner 
-    .trending-content 
-      h1.trending__heading <span>UX Design</span> Process: Mental Modeling Framework.
-      p.trending__desc Podcast Episode - 1
-      p.trending__author <span>Thomas L. Fletcher</span> ( Product Designer at UIHUT )
-      button.primary-button.trending__button
-        img(src="./icons/home/play-icon-trending.svg", alt="play-icon")
-        span Play Now
-    .trending-media
-      img.trending__image(srcset="./images/home/trending-img.png 2x", alt="")
+    .trending-list
+      each item in [{text_gradient: "UX Design", heading: "Mental Modeling Framework.", desc: "Podcast Episode - 1", author_name: "Thomas L. Fletcher", author_position: "Product Designer at UIHUT", src_image: "./images/home/trending-img.png 2x"}]
+        +trendingItem(item)
+    +dots(5, 3)
+      

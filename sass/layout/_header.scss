@@ -109,4 +109,17 @@
       border-radius: inherit;
     }
   }
+
+  @media screen and (max-width: 767.98px) {
+    padding: 20px 24px;
+    &-inner::before {
+      content: url("../../icons/logo-mobile.svg");
+    }
+    &-form, &-cta {
+      display: none;
+    }
+    &-user {
+      margin-left: auto;
+    }
+  }
 }
